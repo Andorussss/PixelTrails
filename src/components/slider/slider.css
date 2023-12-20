@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.slider{
+    padding:25px 0;
+    background-color: #251c28;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.slider-box{
+    width: 1000px;
+    height: 562px;
+    margin: 0 auto 25px auto;
+    overflow: hidden;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider img{
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+    transform: scale(0.8);
+
+}
+.price_box{
+    color: white;
+    margin: 0 auto;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+}
+.caption{
+    position: absolute;
+    margin-bottom: 50px;
+}
+.price{
+    font-size: 1.1rem;
+    margin: 0;
+}
+.title{
+    margin-bottom: 5px;
+}
+.slider img:hover{
+    transform: scale(0.83);
+}
+.slider .carousel-indicators [data-bs-target]{
+    height: 2px;
+    width: 20px;
+
+}

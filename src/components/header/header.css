@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.header ul {
+    display: inherit;
+    margin: 0;
+}
+
+.header ul li {
+    list-style: none;
+    margin: 0;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+}
+
+.header a{
+    text-decoration: none;
+}
+.header ul a{
+    color: white;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    font-size: 24px;
+}
+.header h3{
+    margin: 0;
+    position: relative;
+}
+.header h3 a {
+    color:white;
+    font-size: 1.8rem;
+    transition: 0.7s;
+}
+
+.header h3 a:hover {
+    color: orange;
+}
+.header ul a:hover,
+.catalog:hover {
+    color: rgb(215, 192, 61);
+}
+.catalog-dropdown {
+    position: absolute;
+    width: 131px;
+    cursor: pointer;
+    padding: 0;
+    background-color: #222;
+    list-style: none;
+    z-index: 1000;
+}
+
+.catalog-dropdown  li {
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid white;
+}
+
+.catalog-dropdown a{
+    margin: 0;
+    padding: 0;
+}
+.catalog-dropdown a li{
+    font-size: 24px;
+}
+.catalog{
+    cursor: pointer;
+    transition-duration: 0.7s;
+    margin: 0;
+    font-size: 24px;
+}

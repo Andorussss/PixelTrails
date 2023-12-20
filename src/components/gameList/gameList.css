@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.notFound{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ff4400;
+    font-size: 24px;
+}
+.gameList{
+    margin-bottom: 25px;
+}

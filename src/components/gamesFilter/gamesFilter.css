@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.filter{
+    margin:25px 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.filter-box{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.category-title{
+    padding: 20px;
+    cursor: pointer;
+    border-bottom:5px solid grey;
+    transition: 0.3s;
+}
+.selected-category{
+    color: #ff4400;
+    border-bottom:5px solid #ff4400;;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.category-title:hover,
+.selected-category:hover {
+    color: #ff4400;
+}
