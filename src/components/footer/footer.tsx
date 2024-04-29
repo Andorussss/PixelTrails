@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import './footer.css'
-const Footer = () => {
+import React from 'react';
+import { Link } from "react-router-dom";
+import './footer.css';
+
+const Footer: React.FC = () => {
     return (
         <footer className='footer'>
             <p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Page.css'
-const PrivacyPolicyPage = () => {
+const PrivacyPolicyPage: React.FC = () => {
     return (
         <div className={'container'}>
             <h1 className={'title'}>Privacy Policy</h1>

@@ -1,24 +1,42 @@
 import React, { Component } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import './slider.css'
-import {Link} from "react-router-dom";
-export default class SimpleSlider extends Component {
-    constructor(props) {
+import './slider.css';
+import { Link } from "react-router-dom";
+
+interface IGame {
+    id: number;
+    src: string;
+    title: string;
+    discount?: string;
+    price: string;
+    category:string;
+}
+
+interface ISimpleSliderProps {
+    games: IGame[];
+}
+
+interface ISimpleSliderState {
+    games: IGame[];
+}
+
+export default class SimpleSlider extends Component<ISimpleSliderProps, ISimpleSliderState> {
+    constructor(props: ISimpleSliderProps) {
         super(props);
         this.state = {
             games: [],
         };
     }
 
-
     componentDidMount() {
-        this.setState({games:this.props.games})
+        this.setState({ games: this.props.games });
     }
+
     render() {
-        const games=this.state.games
+        const { games } = this.state;
         return (
             <div className={'slider'}>
-                <Carousel className={'slider-box'} >
+                <Carousel className={'slider-box'}>
                     {games && games.map((game) => (
                         <Carousel.Item key={game.id}>
                             <Link to={`/game/${game.id}`}>
@@ -34,9 +52,6 @@ export default class SimpleSlider extends Component {
                     ))}
                 </Carousel>
             </div>
-
-
         );
-
     }
 }

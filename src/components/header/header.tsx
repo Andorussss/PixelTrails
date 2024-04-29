@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 
-const Header = (props) => {
-    const [showCatalogDropdown, setShowCatalogDropdown] = useState(false);
-    const handleCatalogMouseEnter = () => {
-        setShowCatalogDropdown((prevState)=>!prevState);
+const Header: React.FC = () => {
+    const [showCatalogDropdown, setShowCatalogDropdown] = useState<boolean>(false);
+
+    const handleCatalogMouseEnter = (): void => {
+        setShowCatalogDropdown((prevState) => !prevState);
     };
 
-    const handleCatalogMouseLeave = () => {
+    const handleCatalogMouseLeave = (): void => {
         setShowCatalogDropdown(false);
     };
 
@@ -18,48 +19,36 @@ const Header = (props) => {
                 <Link to="/">Pixel Trails</Link>
             </h3>
             <ul>
-                <li onClick={handleCatalogMouseEnter} onMouseLeave={handleCatalogMouseLeave}>
+                <li onMouseEnter={handleCatalogMouseEnter} onMouseLeave={handleCatalogMouseLeave}>
                     <p className={'catalog'}>Product Catalog</p>
                     {showCatalogDropdown && (
                         <ul className="catalog-dropdown">
                             <Link to={'/action-genre'}>
-                                <li>
-                                    Action
-                                </li>
+                                <li>Action</li>
                             </Link>
                             <Link to={'/adventure-genre'}>
-                                <li>
-                                    Adventure
-                                </li>
+                                <li>Adventure</li>
                             </Link>
                             <Link to={'/sport-genre'}>
-                                <li>
-                                    Sport
-                                </li>
+                                <li>Sport</li>
                             </Link>
                             <Link to={'/strategy-genre'}>
-                                <li>
-                                    Strategy
-                                </li>
+                                <li>Strategy</li>
                             </Link>
                             <Link to={'/race-genre'}>
-                                <li>
-                                    race
-                                </li>
+                                <li>Race</li>
                             </Link>
                             <Link to={'/simulator-genre'}>
-                                <li>
-                                   simulators
-                                </li>
+                                <li>Simulators</li>
                             </Link>
                         </ul>
                     )}
                 </li>
                 <li>
-                    <Link to="/basket">my basket</Link>
+                    <Link to="/basket">My Basket</Link>
                 </li>
                 <li>
-                    <Link to={"/about-us"}>About us</Link>
+                    <Link to={"/about-us"}>About Us</Link>
                 </li>
             </ul>
         </header>
